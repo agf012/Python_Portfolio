@@ -241,11 +241,10 @@ print(numpy.mean(data, axis = 1))
 
 
 ## Functions
+
+
+
 In this funtion we analyzed different functions.
-
-
-
-
 ```python
 farenheit_val = 99
 celsius_val = ((farenheit_val -32)*(5/9))
