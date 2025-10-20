@@ -1,7 +1,8 @@
 # Floyd_Python_Portfolio
 This is the portfolio of python code that I learned during BISC 4503
 
-
+## Using Jupyter Notebooks
+## Python Fundamentals
 ## Analyzing Patient Data
 
 
@@ -239,7 +240,10 @@ print(numpy.mean(data, axis = 1))
 ```
 ```
 
-
+## Storing Values in Lists
+## Using Loops
+## Using Multiple Files
+## Making Choices
 ## Functions
 
 
@@ -828,4 +832,13 @@ print_temperatures()
 
     Temperature in Farenheit was: 212.0
     Temperature in Kelvin was: 373.15
+```
+
+```
+
+
+
+## Defensive Programming 
+## Transcribing DNA into RNA
+## Translating RNA into protein
 
