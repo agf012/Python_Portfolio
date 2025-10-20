@@ -240,7 +240,7 @@ print(numpy.mean(data, axis = 1))
 
 
 
-## Functions
+**## Functions**
 
 
 
