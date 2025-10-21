@@ -3,6 +3,142 @@ This is the portfolio of python code that I learned during BISC 4503
 
 ## Using Jupyter Notebooks
 ## Python Fundamentals
+
+```python
+# Any python interpreter can be used as a calculator:
+3 + 5 * 4
+```
+
+
+
+
+    23
+
+
+
+
+```python
+# Lets save a value to a variable 
+weight_kg = 60
+```
+
+
+```python
+print(weight_kg)
+```
+
+    60
+
+
+
+```python
+# Weight0 = valid
+# 0weight = invalid
+# weight and Weight are different
+```
+
+
+```python
+# Types of data 
+# There are three common types of data
+# Integer numbers
+# Floating point numbers
+# Strings
+```
+
+
+```python
+# Floating point number 
+weight_kg = 60.3
+```
+
+
+```python
+# String composed of letters
+patient_name = "Jon Smith"
+```
+
+
+```python
+# String comprised of numbers
+patient_id = '001'
+```
+
+
+```python
+# Use variables in python
+
+weight_lb = 2.2 * weight_kg
+
+print(weight_lb)
+```
+
+    132.66
+
+
+
+```python
+# Lets add a prefix to our patient id
+
+patient_id = 'inflam_' + patient_id
+
+print(patient_id) 
+```
+
+    inflam_001
+
+
+
+```python
+# Lets combine print statements 
+
+print(patient_id, 'weight in kilograms:', weight_kg)
+```
+
+    inflam_001 weight in kilograms: 60.3
+
+
+
+```python
+# We can call a function inside another function
+
+print(type(60.3))
+
+print(type(patient_id))
+```
+
+    <class 'float'>
+    <class 'str'>
+
+
+
+```python
+# We can also do calculation inside the print function
+
+print('weight in lbs:', 2.2 * weight_kg)
+```
+
+    weight in lbs: 132.66
+
+
+
+```python
+print(weight_kg)
+```
+
+    60.3
+
+
+
+```python
+weight_kg = 65.0
+print('weight in killograms is now:', )
+```
+
+    weight in killograms is now:
+
+
+
 ## Analyzing Patient Data
 
 
@@ -243,7 +379,207 @@ print(numpy.mean(data, axis = 1))
 ## Storing Values in Lists
 ## Using Loops
 ## Using Multiple Files
+
+```python
+import glob
+```
+
+
+```python
+print(glob.glob('inflammation*.csv'))
+```
+
+    ['inflammation-10.csv', 'inflammation-09.csv', 'inflammation-11.csv', 'inflammation-06.csv', 'inflammation-05.csv', 'inflammation-08.csv', 'inflammation-01.csv', 'inflammation-07.csv', 'inflammation-04.csv', 'inflammation-03.csv', 'inflammation-02.csv', 'inflammation-12.csv']
+
+
+
+```python
+import glob
+import numpy
+import matplotlib.pyplot
+
+filenames = sorted(glob.glob('inflammation*.csv'))
+filenames = filenames[0:3]
+
+for filename in filenames:
+    print(filename)
+    
+    data = numpy.loadtxt(fname=filename, delimiter = ',')
+    
+    fig = matplotlib.pyplot.figure(figsize = (10.0, 3.0))
+    
+    axes1 = fig.add_subplot(1,3,1)
+    axes2 = fig.add_subplot(1,3,2)
+    axes3 = fig.add_subplot(1,3,3)
+    
+    axes1.set_ylabel('average')
+    axes1.plot(numpy.mean(data, axis = 0))
+    
+    axes2.set_ylabel('max')
+    axes2.plot(numpy.amax(data, axis = 0))
+    
+    axes3.set_ylabel('min')
+    axes3.plot(numpy.amin(data, axis = 0))
+    
+    fig.tight_layout()
+    matplotlib.pyplot.show()
+```
+
+    inflammation-01.csv
+
+
+
+    <Figure size 1000x300 with 3 Axes>
+
+
+    inflammation-02.csv
+
+
+
+    <Figure size 1000x300 with 3 Axes>
+
+
+    inflammation-03.csv
+
+
+
+    <Figure size 1000x300 with 3 Axes>
+
+
+
 ## Making Choices
+
+```python
+num = 37
+if num > 100:
+    print('greater')
+else:
+    print('not greater')
+print('done')
+```
+
+    not greater
+    done
+
+
+
+```python
+num = 53
+print('before conditional...')
+if num > 100:
+    print(num, 'is greater than 100')
+print('...after conditional')
+```
+
+    before conditional...
+    ...after conditional
+
+
+
+```python
+num = 14
+
+if num > 0:
+    print(num, 'is positive')
+elif num == 0:
+    print(num, 'is zero')
+else:
+    print(num, 'is negative')
+```
+
+    14 is positive
+
+
+
+```python
+if (1 > 0) and (-1 >= 0):
+    print('both parts are true')
+else:
+    print('at least one part is false')
+```
+
+    at least one part is false
+
+
+
+```python
+if (1 > 0) or (-1 >= 0):
+    print('at least one part is true')
+else:
+    print('both of these are false')
+```
+
+    at least one part is true
+
+
+
+```python
+import numpy
+```
+
+```python
+import numpy
+```
+
+
+```python
+data = numpy.loadtxt(fname='inflammation-01.csv', delimiter=',')
+```
+
+
+```python
+max_inflammation_0 = numpy.amax(data, axis=0)[0]
+```
+
+
+```python
+max_inflammation_20 = numpy.amax(data, axis=0)[20]
+
+if max_inflammation_0 == 0 and max_inflammation_20 == 20:
+    print('Saspictious looking maxima!')
+```
+
+    Saspictious looking maxima!
+
+
+
+```python
+max_inflammation_20 = numpy.amax(data, axis=0)[20]
+
+if max_inflammation_0 == 0 and max_inflammation_20 == 20:
+    print('Saspictious looking maxima!')
+
+elif numpy.sum(numpy.amin(data, axis=0)) == 0:
+    print('Minima add up to zero!')
+    
+else:
+    print('Seems OK!')
+```
+
+    Saspictious looking maxima!
+
+
+
+```python
+data = numpy.loadtxt(fname='inflammation-03.csv', delimiter=',')
+
+max_inflammation_0 = numpy.amax(data, axis=0)[0]
+
+max_inflammation_20 = numpy.amax(data, axis=0)[20]
+
+if max_inflammation_0 == 0 and max_inflammation_20 == 20:
+    print('Saspictious looking maxima!')
+elif numpy.sum(numpy.amin(data, axis=0)) == 0:
+    print('Minima add up to zero! -> HEALTHY PARTICIPANT AlERT!')
+else:
+    print('Seems OK!')
+```
+
+    Minima add up to zero! -> HEALTHY PARTICIPANT AlERT!
+
+
+
+
 ## Functions
 
 
