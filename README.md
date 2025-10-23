@@ -1407,9 +1407,6 @@ print_temperatures()
 
     Temperature in Farenheit was: 212.0
     Temperature in Kelvin was: 373.15
-```
-
-```
 
 
 
