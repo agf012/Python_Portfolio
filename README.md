@@ -6,6 +6,8 @@ This is the portfolio of python code that I learned during BISC 4503
 
 ## Python Fundamentals
 
+
+In this analysis, we learned the fundamentals of python.
 ```python
 # Any python interpreter can be used as a calculator:
 3 + 5 * 4
@@ -379,6 +381,8 @@ print(numpy.mean(data, axis = 1))
 
 ## Storing Values in Lists
 
+
+In this analysis, we used different values to make lists.
 ```python
 odds = [1, 3, 5, 7]
 print('odds are:', odds)
@@ -532,7 +536,7 @@ print('Omitting ending index:', sond)
 
 ## Using Loops
 
-
+In this analysis, we used different numbers to help make loops.
 ```python
 odds = [1,3,5,7]
 ```
@@ -618,6 +622,8 @@ print(len(name))
 
 ## Using Multiple Files
 
+
+In this analysis, we learned how we could make multiple files.
 ```python
 import glob
 ```
@@ -687,6 +693,8 @@ for filename in filenames:
 
 ## Making Choices
 
+
+In this analysis, we made the pyhton make choices.
 ```python
 num = 37
 if num > 100:
