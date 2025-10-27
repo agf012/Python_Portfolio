@@ -3,6 +3,8 @@ This is the portfolio of python code that I learned during BISC 4503
 
 ## Using Jupyter Notebooks
 
+
+In this analysis, we learn the basic fundamentals of using jupyter notebooks.
 ```python
 %matplotlib inline
 import pandas as pd
@@ -1915,6 +1917,7 @@ print_temperatures()
 ## Defensive Programming 
 
 
+In this analysis, reliable coding is created in case of errors. 
 ```python
 numbers = [1.5, 2.3, 0.7, 0.001, 4.4]
 total = 0.0
@@ -1972,6 +1975,7 @@ print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0)))
 ## Transcribing DNA into RNA
 
 
+In this analysis, we are looking at transcription.
 ```python
 # Prompt the user to input fasta file name 
 
@@ -2038,7 +2042,7 @@ print(rna_sequence)
 ## Translating RNA into protein
 
 
-
+In this analysis, we are looking at translation.
 ```python
 # Prompt the user to enter the input RNA file name
 
