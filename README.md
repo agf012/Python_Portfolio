@@ -1191,7 +1191,7 @@ for filename in filenames:
 ## Making Choices
 
 
-In this analysis, we made the pyhton make choices.
+In this analysis, we made the python make choices.
 ```python
 num = 37
 if num > 100:
