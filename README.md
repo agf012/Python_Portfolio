@@ -1325,7 +1325,7 @@ else:
 
 
 
-In this funtion we analyzed different functions.
+In this analysis, we analyzed different functions.
 ```python
 farenheit_val = 99
 celsius_val = ((farenheit_val -32)*(5/9))
